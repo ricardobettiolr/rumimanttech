@@ -58,6 +58,21 @@ export default function RuminantsTechLanding() {
         </button>
       </section>
 
+      <section className="py-16 text-center bg-yellow-50">
+        <h3 className="text-2xl font-bold mb-4">💼 This domain is for sale</h3>
+        <p className="mb-4">Interested in acquiring <strong>ruminanttech.com</strong>?</p>
+        <p className="text-lg font-semibold">💌 Contact: <a href="mailto:sales@fertilityfurrow.com" className="text-green-700 underline">sales@fertilityfurrow.com</a></p>
+      </section>
+
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <h3 className="text-3xl font-bold mb-8 text-center">Galería de Rumiantes</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <img src="https://images.unsplash.com/photo-1580734072586-c7f41c572b30" alt="Vaca" className="rounded-2xl shadow-md" />
+          <img src="https://images.unsplash.com/photo-1615807719779-3a0d4a1f62b1" alt="Cabra" className="rounded-2xl shadow-md" />
+          <img src="https://images.unsplash.com/photo-1588195538641-8aa923f6baf5" alt="Oveja" className="rounded-2xl shadow-md" />
+        </div>
+      </section>
+
       <footer className="bg-green-800 text-white p-6 text-center">
         <p>&copy; {new Date().getFullYear()} RuminantsTech. Todos los derechos reservados.</p>
       </footer>
