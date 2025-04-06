@@ -5,7 +5,7 @@ export default function RuminantsTechLanding() {
     <div className="min-h-screen bg-white text-gray-800 font-sans">
       <header className="bg-green-800 text-white p-6 shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">RuminantsTech</h1>
+          <h1 className="text-2xl font-bold">Ruminants Technologies</h1>
           <button className="bg-white text-green-800 font-semibold px-4 py-2 rounded-full hover:bg-gray-100">
             Contact Us
           </button>
@@ -24,26 +24,32 @@ export default function RuminantsTechLanding() {
         <h3 className="text-3xl font-bold mb-12 text-center">¿Qué ofrecemos?</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white shadow-lg rounded-2xl p-6">
+            <img src="https://images.unsplash.com/photo-1605542231615-3e2c2adbb33a" alt="Equipo para OPU" className="rounded-xl mb-4" />
             <h4 className="text-xl font-semibold mb-2">Equipos para OPU</h4>
             <p>Dispositivos avanzados para aspiración folicular en bovinos y equinos.</p>
           </div>
           <div className="bg-white shadow-lg rounded-2xl p-6">
+            <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6" alt="Sensor salud animal" className="rounded-xl mb-4" />
             <h4 className="text-xl font-semibold mb-2">Sensores de salud animal</h4>
             <p>Monitoreo en tiempo real del bienestar y productividad del ganado.</p>
           </div>
           <div className="bg-white shadow-lg rounded-2xl p-6">
+            <img src="https://images.unsplash.com/photo-1597755120886-cd81256e6a55" alt="Gestión reproductiva" className="rounded-xl mb-4" />
             <h4 className="text-xl font-semibold mb-2">Gestión reproductiva</h4>
             <p>Herramientas inteligentes para planificación y seguimiento reproductivo.</p>
           </div>
           <div className="bg-white shadow-lg rounded-2xl p-6">
+            <img src="https://images.unsplash.com/photo-1602189421586-b3da6a37f80f" alt="Tecnología portátil de campo" className="rounded-xl mb-4" />
             <h4 className="text-xl font-semibold mb-2">Tecnología portátil de campo</h4>
             <p>Equipos duraderos y fáciles de usar para uso veterinario en exteriores.</p>
           </div>
           <div className="bg-white shadow-lg rounded-2xl p-6">
+            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442" alt="Software de trazabilidad" className="rounded-xl mb-4" />
             <h4 className="text-xl font-semibold mb-2">Software de trazabilidad</h4>
             <p>Registro digital del historial productivo, sanitario y genético del animal.</p>
           </div>
           <div className="bg-white shadow-lg rounded-2xl p-6">
+            <img src="https://images.unsplash.com/photo-1607522370275-f132edb190a1" alt="Soporte técnico" className="rounded-xl mb-4" />
             <h4 className="text-xl font-semibold mb-2">Soporte técnico especializado</h4>
             <p>Acompañamiento y asesoría por veterinarios expertos en reproducción animal.</p>
           </div>
@@ -64,17 +70,8 @@ export default function RuminantsTechLanding() {
         <p className="text-lg font-semibold">💌 Contact: <a href="mailto:sales@fertilityfurrow.com" className="text-green-700 underline">sales@fertilityfurrow.com</a></p>
       </section>
 
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <h3 className="text-3xl font-bold mb-8 text-center">Galería de Rumiantes</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <img src="https://images.unsplash.com/photo-1580734072586-c7f41c572b30" alt="Vaca" className="rounded-2xl shadow-md" />
-          <img src="https://images.unsplash.com/photo-1615807719779-3a0d4a1f62b1" alt="Cabra" className="rounded-2xl shadow-md" />
-          <img src="https://images.unsplash.com/photo-1588195538641-8aa923f6baf5" alt="Oveja" className="rounded-2xl shadow-md" />
-        </div>
-      </section>
-
       <footer className="bg-green-800 text-white p-6 text-center">
-        <p>&copy; {new Date().getFullYear()} RuminantsTech. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Ruminants Technologies. Todos los derechos reservados.</p>
       </footer>
     </div>
   );
