@@ -6,9 +6,9 @@ export default function RuminantsTechLanding() {
       <header className="bg-green-800 text-white p-6 shadow-md">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">Ruminants Technologies</h1>
-          <button className="bg-white text-green-800 font-semibold px-4 py-2 rounded-full hover:bg-gray-100">
+          <a href="mailto:sales@fertilityfurrow.com" className="bg-white text-green-800 font-semibold px-4 py-2 rounded-full hover:bg-gray-100">
             Contact Us
-          </button>
+          </a>
         </div>
       </header>
 
