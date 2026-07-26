@@ -1,64 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruminants Technologies</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RuminantTech.com — Domain Available for Sale</title>
+<meta name="description" content="RuminantTech.com is available for sale. Dominio disponible para la venta. Contact sales@fertilityfurrow.com or +1 979 933 7939.">
+<meta property="og:title" content="RuminantTech.com — Domain Available for Sale">
+<meta property="og:description" content="Domain available for sale / Dominio disponible para la venta. sales@fertilityfurrow.com · +1 979 933 7939">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --field: #142018;
+    --field-deep: #0D1511;
+    --field-mid: #1C2A21;
+    --signal: #B7C4A3;
+    --signal-bright: #D2DBC4;
+    --bone: #E8EDE6;
+    --mute: #8A978C;
+    --mute-dim: #667368;
+    --line: rgba(232,237,230,0.12);
+    --accent: #A8B86A;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background: var(--field);
+    color: var(--bone);
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *, *::before, *::after{
+      animation-duration:0.01ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:0.01ms !important;
+    }
+  }
+
+  /* Domain sale strip — always first */
+  .sale-bar{
+    position:sticky; top:0; z-index:40;
+    background: var(--accent);
+    color: var(--field-deep);
+    padding: 0.75rem 5vw;
+    display:flex; flex-wrap:wrap; gap:0.75rem 1.5rem;
+    align-items:center; justify-content:space-between;
+    font-size:0.92rem; font-weight:500;
+  }
+  .sale-bar strong{font-weight:600;}
+  .sale-bar .langs{display:flex; flex-direction:column; gap:0.1rem; line-height:1.25;}
+  .sale-bar .langs span:last-child{font-size:0.82rem; opacity:0.85;}
+  .sale-contacts{display:flex; flex-wrap:wrap; gap:0.75rem 1.25rem; align-items:center;}
+  .sale-contacts a{
+    color: var(--field-deep);
+    text-decoration:none;
+    border-bottom:1px solid rgba(13,21,17,0.35);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.84rem;
+    font-weight:500;
+  }
+  .sale-contacts a:hover{border-bottom-color: var(--field-deep);}
+
+  header{
+    position:sticky; top:auto; z-index:30;
+    display:flex; justify-content:space-between; align-items:center;
+    padding: 1.15rem 5vw;
+    background: rgba(20,32,24,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .logo{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:600; font-size:1.35rem; letter-spacing:-0.02em;
+    text-decoration:none; color: var(--bone);
+  }
+  .logo em{ color:var(--accent); font-style:normal; }
+  nav{ display:flex; align-items:center; gap:1.8rem; }
+  nav a{
+    color: var(--mute); text-decoration:none; font-size:0.88rem;
+    transition:color 0.2s;
+  }
+  nav a:hover{ color:var(--signal-bright); }
+  .nav-cta{
+    border:1px solid var(--accent); color:var(--accent) !important;
+    padding:0.55rem 1.1rem; font-weight:600;
+  }
+  .nav-cta:hover{ background:var(--accent); color:var(--field-deep) !important; }
+  .menu-btn{
+    display:none; background:none; border:1px solid var(--line);
+    color:var(--bone); padding:0.45rem 0.7rem; font-size:0.8rem;
+    font-family:inherit; cursor:pointer;
+  }
+  @media (max-width:820px){
+    .menu-btn{display:block;}
+    nav{
+      display:none; position:absolute; left:0; right:0; top:100%;
+      flex-direction:column; align-items:stretch; gap:0;
+      background: var(--field-deep); border-bottom:1px solid var(--line);
+      padding: 0.5rem 5vw 1rem;
+    }
+    nav.open{display:flex;}
+    nav a{padding:0.85rem 0; border-bottom:1px solid var(--line);}
+    nav .nav-cta{margin-top:0.5rem; text-align:center;}
+    header{position:relative;}
+  }
+
+  .hero{
+    position:relative;
+    min-height: min(92vh, 920px);
+    display:flex; align-items:flex-end;
+    padding: 5.5rem 5vw 4.5rem;
+    border-bottom:1px solid var(--line);
+    background:
+      linear-gradient(180deg, rgba(13,21,17,0.15) 0%, rgba(13,21,17,0.72) 55%, rgba(13,21,17,0.94) 100%),
+      radial-gradient(ellipse 80% 55% at 70% 15%, rgba(168,184,106,0.14), transparent 60%),
+      var(--field);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: radial-gradient(ellipse 70% 60% at 75% 30%, black, transparent);
+    opacity:0.45;
+    pointer-events:none;
+  }
+  .hero-inner{ position:relative; z-index:1; max-width:920px; width:100%; }
+  .brand-mark{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:700;
+    font-size: clamp(3rem, 9vw, 6.5rem);
+    line-height:0.95; letter-spacing:-0.03em;
+    color: var(--bone);
+    margin-bottom:1.4rem;
+  }
+  .brand-mark em{ color:var(--accent); font-style:normal; }
+  .hero h1{
+    font-family:'Fraunces', Georgia, serif; font-weight:500;
+    font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+    line-height:1.25; letter-spacing:-0.01em;
+    color: var(--signal-bright);
+    max-width: 28ch;
+  }
+  .hero .lede{
+    margin-top:1.15rem; max-width:42ch;
+    color:var(--mute); font-size:1.05rem;
+  }
+  .hero-actions{ margin-top:2rem; display:flex; gap:0.85rem; flex-wrap:wrap; }
+
+  .btn{
+    font-family:'IBM Plex Sans', sans-serif; font-weight:600; font-size:0.92rem;
+    padding: 0.9rem 1.55rem; text-decoration:none; display:inline-block;
+    letter-spacing:0.01em; transition:transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    border:1px solid transparent;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-primary{ background:var(--accent); color:var(--field-deep); }
+  .btn-primary:hover{ background:var(--signal-bright); }
+  .btn-ghost{ border-color:var(--mute-dim); color:var(--bone); }
+  .btn-ghost:hover{ border-color:var(--accent); color:var(--accent); }
+
+  section{ padding: 5.5rem 5vw; border-bottom:1px solid var(--line); }
+  .section-head{ max-width:640px; margin-bottom:2.75rem; }
+  .section-eyebrow{
+    font-family:'IBM Plex Mono', monospace; font-size:0.75rem;
+    color:var(--accent); letter-spacing:0.14em; text-transform:uppercase; margin-bottom:0.85rem;
+  }
+  .section-head h2{
+    font-family:'Fraunces', Georgia, serif; font-weight:600;
+    font-size:clamp(1.85rem, 3.2vw, 2.65rem); letter-spacing:-0.02em;
+  }
+  .section-head p{ color:var(--mute); margin-top:0.9rem; font-size:1.05rem; }
+
+  /* Pedigree — signature, below hero */
+  .pedigree-wrap{ background: var(--field-deep); }
+  .pedigree{
+    max-width:720px;
+    border:1px solid var(--line);
+    padding: 1.6rem 1.5rem;
+    font-family:'IBM Plex Mono', monospace; font-size:0.72rem;
+  }
+  .pedigree-title{
+    color:var(--mute-dim); text-transform:uppercase; letter-spacing:0.1em;
+    font-size:0.68rem; margin-bottom:1.1rem;
+  }
+  .ped-row{ display:grid; grid-template-columns: 1fr 1fr; gap:0.55rem; margin-bottom:0.55rem; }
+  .ped-cell{ border:1px solid var(--line); padding:0.7rem 0.8rem; }
+  .ped-cell.sire{ border-left:2px solid var(--accent); }
+  .ped-cell.dam{ border-left:2px solid var(--signal); }
+  .ped-name{ color:var(--bone); font-size:0.78rem; margin-bottom:0.2rem; }
+  .ped-epd{ color:var(--accent); }
+  .ped-gen0{ grid-column: 1 / -1; margin-bottom:0.85rem; }
+  .ped-gen0 .ped-cell{ padding:1rem; }
+  .ped-gen0 .ped-name{ font-size:0.95rem; }
+
+  .services{
+    display:grid; grid-template-columns: repeat(3, 1fr);
+    gap:0; border-top:1px solid var(--line);
+  }
+  @media (max-width:860px){ .services{ grid-template-columns:1fr; } }
+  .service{
+    padding:2.2rem 0; border-bottom:1px solid var(--line);
+  }
+  @media (min-width:861px){
+    .service{
+      padding:2.2rem 1.8rem 2.2rem 0;
+      border-bottom:none;
+      border-right:1px solid var(--line);
+    }
+    .service:first-child{ padding-left:0; }
+    .service:last-child{ border-right:none; padding-right:0; padding-left:1.8rem; }
+    .service:nth-child(2){ padding-left:1.8rem; }
+  }
+  .service-index{ font-family:'IBM Plex Mono', monospace; color:var(--mute-dim); font-size:0.8rem; }
+  .service h3{
+    font-family:'Fraunces', Georgia, serif; font-weight:600;
+    font-size:1.35rem; margin:0.85rem 0 0.7rem; color:var(--signal-bright);
+  }
+  .service p{ color:var(--mute); font-size:0.95rem; max-width:36ch; }
+
+  .step{
+    display:grid; grid-template-columns: 110px 1fr; gap:1.5rem;
+    padding: 1.75rem 0; border-top:1px solid var(--line);
+  }
+  .step:last-child{ border-bottom:1px solid var(--line); }
+  .step-day{
+    font-family:'IBM Plex Mono', monospace; color:var(--accent);
+    font-size:0.82rem; padding-top:0.25rem;
+  }
+  .step-body h4{
+    font-family:'Fraunces', Georgia, serif; font-size:1.2rem;
+    font-weight:600; margin-bottom:0.4rem;
+  }
+  .step-body p{ color:var(--mute); font-size:0.98rem; max-width:58ch; }
+  @media (max-width:560px){
+    .step{ grid-template-columns:1fr; gap:0.4rem; }
+  }
+
+  .stat-strip{
+    display:grid; grid-template-columns: repeat(4,1fr);
+    gap:1.5rem 2rem; border-top:1px solid var(--line); padding-top:2.5rem;
+  }
+  @media (max-width:760px){ .stat-strip{ grid-template-columns:1fr 1fr; } }
+  .stat-value{
+    font-family:'Fraunces', Georgia, serif; font-size:2rem; color:var(--accent);
+    letter-spacing:-0.02em;
+  }
+  .stat-label{
+    color:var(--mute-dim); font-size:0.82rem; margin-top:0.35rem;
+    text-transform:uppercase; letter-spacing:0.04em;
+  }
+
+  .cta-section{
+    text-align:left;
+    background:
+      radial-gradient(ellipse 70% 80% at 100% 0%, rgba(168,184,106,0.12), transparent 55%),
+      var(--field-mid);
+  }
+  .cta-section .section-head{ margin-bottom:1.5rem; }
+  .cta-section h2{ max-width:18ch; }
+  .cta-box{
+    margin-top:2rem; padding:1.75rem 0 0;
+    border-top:1px solid var(--line);
+    display:grid; gap:1.25rem;
+  }
+  .cta-label{
+    font-family:'IBM Plex Mono', monospace; font-size:0.72rem;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--mute-dim);
+    margin-bottom:0.35rem;
+  }
+  .cta-line{
+    font-family:'Fraunces', Georgia, serif; font-size:clamp(1.35rem, 2.5vw, 1.75rem);
+    font-weight:600; color:var(--bone); text-decoration:none;
+    display:inline-block;
+  }
+  .cta-line:hover{ color:var(--accent); }
+  .cta-note{ color:var(--mute); max-width:48ch; margin-top:0.5rem; }
+
+  footer{
+    padding: 2.25rem 5vw;
+    display:flex; justify-content:space-between; align-items:flex-start;
+    color:var(--mute-dim); font-size:0.85rem; flex-wrap:wrap; gap:1rem;
+    background: var(--field-deep);
+  }
+  footer a{ color:var(--accent); text-decoration:none; }
+  footer a:hover{ text-decoration:underline; }
+
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity 0.65s ease, transform 0.65s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Ruminants Technologies</h1>
-    <p>Precision Technology for Ruminants</p>
-    <a href="mailto:sales@fertilityfurrow.com"><button>Contact Us</button></a>
-  </header>
 
-  <main>
-    <section>
-      <h2>What We Offer</h2>
-      <div class="grid">
-        <div class="product">
-          <img src="images/opu.jpg" alt="OPU Equipment">
-          <h3>OPU Equipment</h3>
-          <p>Advanced devices for follicular aspiration in bovines and equines.</p>
-        </div>
-        <div class="product">
-          <img src="images/sensors.jpg" alt="Animal Health Sensors">
-          <h3>Animal Health Sensors</h3>
-          <p>Real-time monitoring of livestock well-being and productivity.</p>
-        </div>
-        <div class="product">
-          <img src="images/repro.jpg" alt="Reproductive Management">
-          <h3>Reproductive Management</h3>
-          <p>Smart tools for planning and tracking reproduction cycles.</p>
-        </div>
-        <div class="product">
-          <img src="images/field.jpg" alt="Field-Ready Technology">
-          <h3>Field-Ready Technology</h3>
-          <p>Durable and easy-to-use veterinary devices for outdoor use.</p>
-        </div>
-        <div class="product">
-          <img src="images/trace.jpg" alt="Traceability Software">
-          <h3>Traceability Software</h3>
-          <p>Digital records of the animal's productive, health, and genetic history.</p>
-        </div>
-        <div class="product">
-          <img src="images/support.jpg" alt="Specialized Support">
-          <h3>Specialized Support</h3>
-          <p>Expert assistance by veterinary professionals in reproductive technology.</p>
+<div class="sale-bar" role="region" aria-label="Domain for sale">
+  <div class="langs">
+    <strong>Domain available for sale</strong>
+    <span>Dominio disponible para la venta</span>
+  </div>
+  <div class="sale-contacts">
+    <a href="mailto:sales@fertilityfurrow.com">sales@fertilityfurrow.com</a>
+    <a href="tel:+19799337939">+1 979 933 7939</a>
+  </div>
+</div>
+
+<header>
+  <a class="logo" href="#top">Ruminant<em>Tech</em></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" id="menu-toggle">Menu</button>
+  <nav id="site-nav">
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#results">Results</a>
+    <a href="#contact" class="nav-cta">Buy Domain</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="brand-mark">Ruminant<em>Tech</em></p>
+      <h1>Better bloodlines, on your schedule.</h1>
+      <p class="lede">Embryo transfer, sexed semen AI, and genomic selection for cattle, goat, and sheep — planned around your calving window.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Inquire about domain</a>
+        <a href="#services" class="btn btn-ghost">See brand concept</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pedigree-wrap reveal" aria-label="Sample mating plan">
+    <div class="section-head" style="margin-bottom:1.75rem;">
+      <div class="section-eyebrow">Brand Signature</div>
+      <h2>Genetics as interface</h2>
+      <p>A pedigree / EPD panel as the visual proof — not a stock photo of a cow.</p>
+    </div>
+    <div class="pedigree">
+      <div class="pedigree-title">Sample Mating Plan — EPD Snapshot</div>
+      <div class="ped-row ped-gen0">
+        <div class="ped-cell">
+          <div class="ped-name">Offspring — Projected</div>
+          <div class="ped-epd">WW +68 · MILK +24 · CE +9</div>
         </div>
       </div>
-    </section>
+      <div class="ped-row">
+        <div class="ped-cell sire"><div class="ped-name">Sire — Lot 14</div><div class="ped-epd">WW +71 · REA +.42</div></div>
+        <div class="ped-cell dam"><div class="ped-name">Dam — Recip 220</div><div class="ped-epd">MILK +26 · CE +11</div></div>
+      </div>
+      <div class="ped-row">
+        <div class="ped-cell sire"><div class="ped-name">Sire's Sire</div><div class="ped-epd">WW +74</div></div>
+        <div class="ped-cell dam"><div class="ped-name">Sire's Dam</div><div class="ped-epd">REA +.51</div></div>
+      </div>
+    </div>
+  </section>
 
-    <section class="for-sale">
-      <p>💼 <strong>This domain is for sale</strong><br>
-      Interested in acquiring <strong>ruminanttech.com</strong>?</p>
-      <p>📬 Contact: <a href="mailto:sales@fertilityfurrow.com">sales@fertilityfurrow.com</a></p>
-    </section>
-  </main>
+  <section id="services" class="reveal">
+    <div class="section-head">
+      <div class="section-eyebrow">What We Do</div>
+      <h2>Three services, one goal: measurable genetic gain</h2>
+      <p>Every service is built around expected progeny differences (EPDs) — so every mating decision is a data decision.</p>
+    </div>
+    <div class="services">
+      <article class="service">
+        <div class="service-index">01</div>
+        <h3>Embryo Transfer</h3>
+        <p>Superovulation, flush, and transfer matched to your recipient herd’s cycle — donor selection through confirmed pregnancy.</p>
+      </article>
+      <article class="service">
+        <div class="service-index">02</div>
+        <h3>Sexed Semen AI</h3>
+        <p>Timed AI with sexed and conventional semen, scheduled around labor availability and facility layout.</p>
+      </article>
+      <article class="service">
+        <div class="service-index">03</div>
+        <h3>Genomic Selection</h3>
+        <p>DNA-based EPD panels for sire and dam selection on projected offspring performance, not pedigree alone.</p>
+      </article>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2025 Ruminants Technologies. All rights reserved.</p>
-  </footer>
+  <section id="process" class="reveal">
+    <div class="section-head">
+      <div class="section-eyebrow">How It Runs</div>
+      <h2>From consult to confirmed pregnancy</h2>
+    </div>
+    <div class="process">
+      <div class="step">
+        <div class="step-day">Week 1</div>
+        <div class="step-body">
+          <h4>Herd consult &amp; genetic goals</h4>
+          <p>Review current herd, target traits (growth, maternal, carcass), and calving window before touching a single animal.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-day">Week 2–3</div>
+        <div class="step-body">
+          <h4>Sire and donor selection</h4>
+          <p>EPD-matched sire selection against your dam group, accounting for calving ease on first-calf heifers.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-day">Week 4–6</div>
+        <div class="step-body">
+          <h4>Synchronization &amp; breeding</h4>
+          <p>On-site timed AI or embryo transfer, scheduled around your facility and labor — not a fixed regional route.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-day">Day 30–45</div>
+        <div class="step-body">
+          <h4>Pregnancy confirmation</h4>
+          <p>Ultrasound confirmation with a written report — sire, dam, and projected offspring EPDs on file.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" class="reveal">
+    <div class="section-head">
+      <div class="section-eyebrow">Why Producers Switch</div>
+      <h2>Numbers that hold up at weaning</h2>
+    </div>
+    <div class="stat-strip">
+      <div class="stat"><div class="stat-value">62–68%</div><div class="stat-label">Typical ET conception rate</div></div>
+      <div class="stat"><div class="stat-value">+42 lb</div><div class="stat-label">Avg. weaning weight gain</div></div>
+      <div class="stat"><div class="stat-value">48 hr</div><div class="stat-label">Sire selection turnaround</div></div>
+      <div class="stat"><div class="stat-value">On-farm</div><div class="stat-label">No shipping animals off-site</div></div>
+    </div>
+  </section>
+
+  <section class="cta-section reveal" id="contact">
+    <div class="section-head">
+      <div class="section-eyebrow">Domain for sale · Dominio en venta</div>
+      <h2>RuminantTech.com is available.</h2>
+      <p>This page is a brand concept for the domain. If it fits your operation or portfolio, reach out to purchase.</p>
+    </div>
+    <div class="cta-box">
+      <div>
+        <div class="cta-label">Email</div>
+        <a class="cta-line" href="mailto:sales@fertilityfurrow.com">sales@fertilityfurrow.com</a>
+      </div>
+      <div>
+        <div class="cta-label">Phone</div>
+        <a class="cta-line" href="tel:+19799337939">+1 979 933 7939</a>
+      </div>
+      <p class="cta-note">Domain available for sale / Dominio disponible para la venta.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>
+    <div>RuminantTech.com — domain concept preview</div>
+    <div style="margin-top:0.35rem;">Domain available for sale · Dominio disponible para la venta</div>
+  </div>
+  <div>
+    <a href="mailto:sales@fertilityfurrow.com">sales@fertilityfurrow.com</a>
+    ·
+    <a href="tel:+19799337939">+1 979 933 7939</a>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('site-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    items.forEach((i) => io.observe(i));
+  } else {
+    items.forEach((i) => i.classList.add('in'));
+  }
+</script>
+
 </body>
 </html>
